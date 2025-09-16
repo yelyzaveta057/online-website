@@ -57,7 +57,7 @@ export default async function Home() {
   </section>
 
   <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
-    {/* <Carousel products={products.data} /> */}
+    <Carousel products={products.data} />
   </section>
 </div>
 

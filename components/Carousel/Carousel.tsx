@@ -4,7 +4,8 @@ import Stripe from "stripe";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Card, CardContent, CardTitle } from "../ui/cards";
+import { Card, CardContent, CardTitle } from "../ui/card";
+
 
 interface Props {
   products: Stripe.Product[];
