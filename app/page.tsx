@@ -28,7 +28,7 @@ export default async function Home() {
 
           <div className="flex justify-center md:justify-start">
             <Button asChild size="lg" className="rounded-full shadow-md">
-              <Link href="/products">Browse All Products</Link>
+              <Link href="/Products">Browse All Products</Link>
             </Button>
           </div>
         </div>
