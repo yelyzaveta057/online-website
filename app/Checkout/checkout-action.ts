@@ -1,5 +1,8 @@
+"use server"
 import { stripe } from "@/lib/stripe";
 import { CartItem } from "@/store/cart-store";
+import { redirect } from "next/navigation";
+
 
 export const checkoutActrion = async (formData: FormData): Promise<void> => {
 
@@ -19,6 +22,9 @@ export const checkoutActrion = async (formData: FormData): Promise<void> => {
         payment_method_types: ["card"],
         line_items,
         mode: "payment",
-        success_url: 
-    })
+        success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/Success`,
+        cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/Checkout`,
+        
+    });
+    redirect(session.url!);
 };
